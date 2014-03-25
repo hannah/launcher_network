@@ -1,8 +1,9 @@
 require 'spec_helper'
 
 describe InterestGroup do
-  let(:valid_attrs) { { name: 'Tom Cruise Fans', creator: 'hello'} }
-  # let(:blanks) { [nil, ''] }
+  let(:user){User.create(first_name: 'Bob', last_name: 'Bill', email: 'test@test.com', role: 'Launcher')}
+  let(:valid_attrs) { { name: 'Tom Cruise Fans', creator: user} }
+  # let(:role) { [['Launcher', 'EE'] }
 
   describe 'validations' do
     context 'when given valid attributes' do
